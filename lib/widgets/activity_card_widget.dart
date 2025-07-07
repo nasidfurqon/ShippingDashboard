@@ -13,8 +13,8 @@ class ActivityCard extends StatelessWidget {
     final cardDetail = CardDashboardDetailData();
     return GridView.builder (
       itemCount: cardDetail.cardData.length,
-      // shrinkWrap: true,
-      // physics: ScrollPhysics(),
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 4,
         crossAxisSpacing: 15,
@@ -45,7 +45,7 @@ class ActivityCard extends StatelessWidget {
               style: TextStyle(
                   fontSize: 16,
                   color: primaryColor,
-                  fontWeight: FontWeight.w600),
+                  fontWeight: FontWeight.w300),
             ),
           ],
         ),

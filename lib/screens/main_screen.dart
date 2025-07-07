@@ -9,27 +9,25 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Row(
-          children: [
-            Expanded(
-              flex: 2,
-              child: SizedBox(
-                child: SideMenu(),
-              )
-            ),
-            Expanded(
-              flex: 7,
-              child: DashboardWidget()
-            ),
-            Expanded(
-              flex: 3,
-              child: Container(
-                color: Colors.green,
-              )
+      body: Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: SizedBox(
+              child: SideMenu(),
             )
-          ],
-        ) 
+          ),
+          Expanded(
+            flex: 7,
+            child: DashboardWidget()
+          ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              color: Colors.green,
+            )
+          )
+        ],
       ),
     );
   }
