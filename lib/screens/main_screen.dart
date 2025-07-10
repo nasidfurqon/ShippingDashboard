@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shipping_dashboard/widgets/dashboard_widget.dart';
+import 'package:shipping_dashboard/widgets/summary_widget.dart';
 
 import '../widgets/side_menu_widget.dart';
 
@@ -23,9 +24,7 @@ class MainScreen extends StatelessWidget {
           ),
           Expanded(
             flex: 3,
-            child: Container(
-              color: Colors.green,
-            )
+            child: SummaryWidget()
           )
         ],
       ),
