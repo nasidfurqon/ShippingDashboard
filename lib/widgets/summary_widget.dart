@@ -5,7 +5,8 @@ import 'package:shipping_dashboard/widgets/schedule_widget.dart';
 import 'package:shipping_dashboard/widgets/sumarry_list_widget.dart';
 
 class SummaryWidget extends StatelessWidget {
-  const SummaryWidget({super.key});
+  final double? height;
+  const SummaryWidget({super.key, this.height});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class SummaryWidget extends StatelessWidget {
                 fontSize: 16, color: primaryColor, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 15),
-          ScheduleWidget(),
+          ScheduleWidget(height: height,),
           SizedBox(height: 30,)
         ],
       ),

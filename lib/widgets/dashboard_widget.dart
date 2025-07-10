@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:shipping_dashboard/utilities/responsive.dart';
 import 'package:shipping_dashboard/widgets/activity_card_widget.dart';
 import 'package:shipping_dashboard/widgets/bar_graph_widget.dart';
 import 'package:shipping_dashboard/widgets/header_widget.dart';
 import 'package:shipping_dashboard/widgets/line_chart_widget.dart';
+import 'package:shipping_dashboard/widgets/summary_widget.dart';
 
 class DashboardWidget extends StatelessWidget {
   const DashboardWidget({super.key});
@@ -27,6 +29,9 @@ class DashboardWidget extends StatelessWidget {
             const LineChartCard(),
             const SizedBox(height: 25),
             const BarGraphCard(),
+            const SizedBox(height: 25),
+            if(Responsive.isTablet(context)) const SummaryWidget(height: 300,),
+            // const SummaryWidget(),
             const SizedBox(height: 30,)
           ],
         ),

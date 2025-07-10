@@ -16,6 +16,7 @@ class SideMenuState extends State<SideMenu> {
   Widget build(BuildContext context) {
     final data = SideMenuData();
     return Container(
+      color: backgroundColor,
       padding: EdgeInsets.symmetric(horizontal: 18, vertical: 90),
       child: ListView.builder(
         itemCount: data.menu.length,
