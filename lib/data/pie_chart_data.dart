@@ -1,6 +1,5 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:shipping_dashboard/const/constant.dart';
 class ChartData {
   final data = [
     PieChartSectionData(
