@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:shipping_dashboard/const/constant.dart';
 import 'package:shipping_dashboard/data/card_dashboard_detail_data.dart';
+import 'package:shipping_dashboard/utilities/responsive.dart';
 import 'package:shipping_dashboard/widgets/customs/custom_card_widget.dart';
 
 class ActivityCard extends StatelessWidget {
@@ -16,8 +17,8 @@ class ActivityCard extends StatelessWidget {
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 4,
-        crossAxisSpacing: 15,
+        crossAxisCount: Responsive.isMobile(context) ? 2: 4,
+        crossAxisSpacing: Responsive.isMobile(context) ? 12 : 15,
         mainAxisSpacing: 12.0
       ),
       itemBuilder: (context, index) => CustomCard(

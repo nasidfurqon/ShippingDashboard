@@ -30,7 +30,7 @@ class DashboardWidget extends StatelessWidget {
             const SizedBox(height: 25),
             const BarGraphCard(),
             const SizedBox(height: 25),
-            if(Responsive.isTablet(context)) const SummaryWidget(height: 300,),
+            if(!Responsive.isDesktop(context)) const SummaryWidget(height: 300,),
             // const SummaryWidget(),
             const SizedBox(height: 30,)
           ],
